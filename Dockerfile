@@ -10,5 +10,6 @@ RUN curl -OL https://github.com/google/protobuf/releases/download/v3.4.0/protoc-
     apt-get install -y unzip && \
     unzip protoc-3.4.0-linux-x86_64.zip -d protoc-3.4.0 && \
     mv protoc-3.4.0/bin/protoc /usr/local/bin && \
+    go get github.com/golang/protobuf/protoc-gen-go && \
     go build github.com/golang/protobuf/protoc-gen-go && \
     mv protoc-gen-go /usr/local/bin
